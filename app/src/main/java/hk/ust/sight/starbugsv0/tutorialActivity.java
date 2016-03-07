@@ -24,7 +24,7 @@ public class tutorialActivity extends Activity {
     Button btnNext;
 
     // Array of String to Show In TextSwitcher
-    String textToShow[]={"Main HeadLine","Your Message","New In Technology","New Articles","Business News","What IS New"};
+    String textToShow[]={"Step 1","Step 2","Step 3","New Articles","Business News","What IS New"};
     int messageCount=textToShow.length;
     // to keep current Index of text
     int currentIndex=-1;
@@ -47,7 +47,7 @@ public class tutorialActivity extends Activity {
 
             public View makeView() {
                 // TODO Auto-generated method stub
-                // create new textView and set the properties like clolr, size etc
+                // create new textView and set the properties like color, size etc
                 TextView myText = new TextView(tutorialActivity.this);
                 myText.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL);
                 myText.setTextSize(36);
