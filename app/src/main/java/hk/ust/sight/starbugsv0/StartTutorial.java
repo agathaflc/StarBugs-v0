@@ -17,5 +17,11 @@ public class StartTutorial extends AppCompatActivity {
                 startActivity(new Intent(StartTutorial.this, ImagesOverview.class));
             }
         });
+        findViewById(R.id.btnBeginTutorial).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StartTutorial.this, tutorialActivity.class));
+            }
+        });
     }
 }

@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(new Intent(MainActivity.this, PatientInfo.class));
             }
         });
-        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnSkip).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, StartTutorial.class));

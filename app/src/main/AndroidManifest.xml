@@ -21,6 +21,7 @@
             android:label="@string/title_activity_patient_info"
             android:theme="@style/AppTheme" />
         <activity android:name=".StartTutorial" />
+        <activity android:name=".tutorialActivity" />
         <activity android:name=".ImagesOverview"></activity>
     </application>
 
