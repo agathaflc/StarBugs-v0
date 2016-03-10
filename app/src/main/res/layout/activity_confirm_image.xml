@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hk.ust.sight.starbugsv0.tutorial_2">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/confirmButton"
+        android:clickable="true"
+        android:textSize="24sp"
+        android:background="#945fd9f4"
+        android:layout_below="@+id/confirm_instructions"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retake"
+        android:id="@+id/regradeButton"
+        android:clickable="true"
+        android:textSize="24sp"
+        android:background="#945fd9f4"
+        android:layout_below="@+id/confirm_instructions"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please check your retina picture:"
+        android:id="@+id/confirm_title"
+        android:textColor="#ff000000"
+        android:textSize="36sp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="right"
+        android:layout_weight="0.18"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src= "@drawable/fundusview"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make sure that the picture aligns with the guiding lines."
+        android:id="@+id/confirm_instructions"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_marginBottom="40dp"
+        android:textSize="20sp"
+        android:layout_alignParentRight="false"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:textColor="#000000" />
+
+</RelativeLayout>
