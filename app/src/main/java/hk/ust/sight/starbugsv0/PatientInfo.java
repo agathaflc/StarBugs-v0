@@ -6,9 +6,16 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+
+import org.w3c.dom.Text;
 
 public class PatientInfo extends AppCompatActivity {
+
+    public String patientName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +23,8 @@ public class PatientInfo extends AppCompatActivity {
         setContentView(R.layout.activity_patient_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         // Commented this part out because it's causing error and idk how to fix
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -39,6 +48,51 @@ public class PatientInfo extends AppCompatActivity {
                 startActivity(new Intent(PatientInfo.this, StartTutorial.class));
             }
         });
+
+
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        EditText textobj = (EditText) findViewById(R.id.textName);
+
+        if(!isEmpty(textobj)) {
+            updatepatientname();
+            int i=1;
+        }
+        else
+        {
+            String TAG =  PatientInfo.class.getSimpleName();
+
+            Log.d(TAG,"helo");
+
+        }
+
+    }
+
+    private boolean isEmpty(EditText text)
+    {
+             if(text.getText().toString().trim().length()>0) {
+                 return false;
+             }
+             else
+             {
+                 return true;
+             }
+
+
+    }
+
+
+
+
+    public void updatepatientname()
+    {
+        EditText obj = (EditText) findViewById(R.id.textName);
+
+       patientName=  obj.getText().toString();
     }
 
 }
