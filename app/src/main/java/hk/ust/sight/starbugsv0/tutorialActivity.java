@@ -1,6 +1,7 @@
 package hk.ust.sight.starbugsv0;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,17 +31,15 @@ public class tutorialActivity extends Activity {
     int currentIndex=-1;
 
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.tutorial_1);
 
 
         // get The references
-        btnNext=(Button)findViewById(R.id.btnNext2);
+        btnNext = (Button) findViewById(R.id.btnNext2);
         //mSwitcher = (TextSwitcher) findViewById(R.id.textView);
 
         // Set the ViewFactory of the TextSwitcher that will create TextView object when asked
@@ -58,7 +57,7 @@ public class tutorialActivity extends Activity {
         });
 
         // Declare the in and out animations and initialize them
-        Animation in = AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left);
+        Animation in = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
         Animation out = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
 
         // set the animation type of textSwitcher
@@ -74,9 +73,27 @@ public class tutorialActivity extends Activity {
                 // TODO Auto-generated method stub
                 currentIndex++;
                 // If index reaches maximum reset it
-                if(currentIndex==messageCount)
-                    currentIndex=0;
+                if (currentIndex == messageCount)
+                    currentIndex = 0;
                 mSwitcher.setText(textToShow[currentIndex]);
+            }
+        });
+//        findViewById(R.id.horizontalScrollView).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
+//            }
+//        });
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tutorialActivity.this, StartTutorial.class));
             }
         });
 

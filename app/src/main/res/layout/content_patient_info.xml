@@ -16,46 +16,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textName"
-        android:text="Name"
         android:layout_below="@+id/textClock"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:inputType="text"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="Name" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textGender"
-        android:text="Gender"
         android:layout_below="@+id/textDob"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Gender" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textDob"
-        android:text="Date of Birth"
         android:layout_below="@+id/textName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Date of Birth" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textPhone"
-        android:text="Phone Number"
         android:layout_below="@+id/textGender"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Phone Number" />
 
     <Button
         android:layout_width="wrap_content"
