@@ -38,9 +38,10 @@ public class tutorialActivity extends Activity {
 
         setContentView(R.layout.tutorial_1);
 
+
         // get The references
-        btnNext=(Button)findViewById(R.id.buttonNext);
-        mSwitcher = (TextSwitcher) findViewById(R.id.textSwitcher);
+        btnNext=(Button)findViewById(R.id.btnNext2);
+        //mSwitcher = (TextSwitcher) findViewById(R.id.textView);
 
         // Set the ViewFactory of the TextSwitcher that will create TextView object when asked
         mSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
