@@ -39,11 +39,11 @@ public class tutorialActivity extends Activity {
 
 
         // get The references
-        btnNext = (Button) findViewById(R.id.btnNext2);
+        //btnNext = (Button) findViewById(R.id.btnNext2);
         //mSwitcher = (TextSwitcher) findViewById(R.id.textView);
 
         // Set the ViewFactory of the TextSwitcher that will create TextView object when asked
-        mSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
+/*        mSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
 
             public View makeView() {
                 // TODO Auto-generated method stub
@@ -77,7 +77,7 @@ public class tutorialActivity extends Activity {
                     currentIndex = 0;
                 mSwitcher.setText(textToShow[currentIndex]);
             }
-        });
+        });*/
 //        findViewById(R.id.horizontalScrollView).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
