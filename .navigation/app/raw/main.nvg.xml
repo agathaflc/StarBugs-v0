@@ -16,8 +16,8 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "hk.ust.sight.starbugsv0.ImagesOverview"/>
       <point      
-        x = "2289"      
-        y = "2190"/>
+        x = "4866"      
+        y = "-113"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -46,6 +46,14 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "hk.ust.sight.starbugsv0.results"/>
+      <point      
+        x = "7121"      
+        y = "-513"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "hk.ust.sight.starbugsv0.StartTutorial"/>
       <point      
         x = "3036"      
@@ -54,6 +62,14 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "hk.ust.sight.starbugsv0.MainActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
         className = "hk.ust.sight.starbugsv0.MainActivity"/>
       <point      
         x = "1768"      

@@ -18,13 +18,20 @@ public class ImagesOverview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_images_overview);
 
+        findViewById(R.id.buttonresult).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ImagesOverview.this, results.class));
+            }
+        });
+
         findViewById(R.id.button8).setOnClickListener(new View.OnClickListener() {
-
-
             public void onClick(View v) {
                 dispatchTakePictureIntent();
-                         }
-                 });
+            }
+        });
+
+
     }
 
     @Override
@@ -35,6 +42,8 @@ public class ImagesOverview extends AppCompatActivity {
 
             ImageView img= (ImageView) findViewById(R.id.mimage);
            img.setImageBitmap(imageBitmap);
+
+
         }
     }
 
