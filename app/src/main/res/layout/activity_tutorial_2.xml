@@ -9,32 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="hk.ust.sight.starbugsv0.tutorial_2">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/button3"
-        android:clickable="true"
-        android:textSize="24sp"
-        android:background="#945fd9f4"
-        android:layout_marginRight="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_alignTop="@+id/button4"
-        android:layout_alignRight="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/button4"
-        android:clickable="true"
-        android:textSize="24sp"
-        android:background="#945fd9f4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_alignEnd="@+id/textView4" />
-
     <TextView
         android:layout_width="132dp"
         android:layout_height="wrap_content"
@@ -72,5 +46,29 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_btn"
+        android:id="@+id/button"
+        android:clickable="true"
+        android:textSize="24sp"
+        android:background="#945fd9f4"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_btn"
+        android:id="@+id/button2"
+        android:clickable="true"
+        android:textSize="24sp"
+        android:background="#945fd9f4"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
 
 </RelativeLayout>

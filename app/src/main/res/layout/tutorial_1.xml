@@ -37,8 +37,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/button"
+        android:text="@string/next_btn"
+        android:id="@+id/btnNext"
         android:clickable="true"
         android:textSize="24sp"
         android:background="#945fd9f4"
@@ -52,14 +52,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/button2"
+        android:text="@string/back_btn"
+        android:id="@+id/btnBack"
         android:clickable="true"
         android:textSize="24sp"
         android:background="#945fd9f4"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignTop="@+id/btnNext"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -68,7 +70,7 @@
         android:src= "@drawable/funduslens"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="86dp"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/btnNext"
         android:layout_below="@+id/textView7"
         android:layout_marginTop="80dp" />
 

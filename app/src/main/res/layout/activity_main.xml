@@ -76,6 +76,6 @@
         android:id="@+id/textView"
         android:layout_below="@+id/titleText"
         android:layout_centerHorizontal="true"
-        android:textSize="18dp" />
+        android:textSize="24dp" />
 
 </RelativeLayout>

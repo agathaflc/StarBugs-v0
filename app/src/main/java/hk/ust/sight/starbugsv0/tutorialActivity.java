@@ -2,19 +2,10 @@ package hk.ust.sight.starbugsv0;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextSwitcher;
-import android.widget.TextView;
-import android.widget.ViewSwitcher;
 
 /**
  * Based on the code found in
@@ -84,7 +75,7 @@ public class tutorialActivity extends Activity {
 //                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
 //            }
 //        });
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(tutorialActivity.this, tutorial_2.class));

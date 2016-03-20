@@ -13,7 +13,21 @@
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="mid_name">Middle name</string>
+    <string name="bpjs_label">BPJS:</string>
+    <string name="bpjs_number">Number</string>
+    <string name="gender_label">Gender:</string>
+    <string name="male_label">Male</string>
+    <string name="female_label">Female</string>
+    <string name="dob_label">Date of Birth:</string>
+    <string name="phone_label">Phone:</string>
+    <string name="phone_number">Number</string>
+
+    <string name="next_btn">Next</string>
+    <string name="back_btn">Back</string>
+
     <string name="take_pic_instruction">Click on one of the boxes\nbelow to take picture</string>
     <string name="left_eye_title">Left Eye</string>
     <string name="right_eye_title">Right Eye</string>
+
+
 </resources>
