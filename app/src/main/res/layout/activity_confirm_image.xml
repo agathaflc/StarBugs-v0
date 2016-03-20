@@ -18,8 +18,8 @@
         android:textSize="24sp"
         android:background="#945fd9f4"
         android:layout_below="@+id/confirm_instructions"
-        android:layout_alignRight="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2" />
+        android:layout_alignRight="@+id/imageEyedrops"
+        android:layout_alignEnd="@+id/imageEyedrops" />
 
     <Button
         android:layout_width="wrap_content"
@@ -30,8 +30,8 @@
         android:textSize="24sp"
         android:background="#945fd9f4"
         android:layout_below="@+id/confirm_instructions"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
+        android:layout_alignLeft="@+id/imageEyedrops"
+        android:layout_alignStart="@+id/imageEyedrops" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -44,14 +44,14 @@
         android:gravity="center_horizontal"
         android:layout_gravity="right"
         android:layout_weight="0.18"
-        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignTop="@+id/imageEyedrops"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageEyedrops"
         android:src= "@drawable/fundusview"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="Make sure that the picture aligns with the guiding lines."
         android:id="@+id/confirm_instructions"
-        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignBottom="@+id/imageEyedrops"
         android:layout_marginBottom="40dp"
         android:textSize="20sp"
         android:layout_alignParentRight="false"

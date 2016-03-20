@@ -3,7 +3,14 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="admin_label">Admin:</string>
+    <string name="admin_name">Name</string>
+    <string name="patient_info_btn">Enter Patient Information</string>
+    <string name="skip_btn">Skip</string>
     <string name="title_activity_patient_info">PatientInfo</string>
+
+
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>

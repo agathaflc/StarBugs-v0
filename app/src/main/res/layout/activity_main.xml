@@ -17,57 +17,6 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:hint="Enter your name here.."
-        android:editable="true"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/nameLabel"
-        android:layout_alignRight="@+id/btnPatientInfo"
-        android:layout_alignEnd="@+id/btnPatientInfo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Admin Name:"
-        android:id="@+id/nameLabel"
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter Patient Information"
-        android:id="@+id/btnPatientInfo"
-        android:clickable="true"
-        android:textSize="22sp"
-        android:background="#945fd9f4"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="69dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Skip"
-        android:id="@+id/btnSkip"
-        android:textSize="20sp"
-        android:background="#945fd9f4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnPatientInfo"
-        android:layout_alignStart="@+id/btnPatientInfo"
-        android:layout_marginBottom="37dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,5 +26,56 @@
         android:layout_below="@+id/titleText"
         android:layout_centerHorizontal="true"
         android:textSize="24dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAdminName"
+        android:hint="@string/admin_name"
+        android:editable="true"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/btnPatientInfo"
+        android:layout_toRightOf="@+id/adminLabel"
+        android:layout_toEndOf="@+id/adminLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_label"
+        android:id="@+id/adminLabel"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPatientInfo"
+        android:clickable="true"
+        android:textSize="22sp"
+        android:background="#945fd9f4"
+        android:layout_below="@+id/editAdminName"
+        android:layout_marginTop="69dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/patient_info_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip_btn"
+        android:id="@+id/btnSkip"
+        android:textSize="20sp"
+        android:background="#945fd9f4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnPatientInfo"
+        android:layout_alignStart="@+id/btnPatientInfo"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

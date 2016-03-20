@@ -41,7 +41,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageEyedrops"
         android:src= "@drawable/eyedrops"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -51,24 +51,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next_btn"
-        android:id="@+id/button"
+        android:id="@+id/btnNext"
         android:clickable="true"
         android:textSize="24sp"
         android:background="#945fd9f4"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignRight="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2" />
+        android:layout_alignBottom="@+id/imageEyedrops"
+        android:layout_alignRight="@+id/imageEyedrops"
+        android:layout_alignEnd="@+id/imageEyedrops" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back_btn"
-        android:id="@+id/button2"
+        android:id="@+id/btnBack"
         android:clickable="true"
         android:textSize="24sp"
         android:background="#945fd9f4"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
+        android:layout_alignBottom="@+id/imageEyedrops"
+        android:layout_alignLeft="@+id/imageEyedrops"
+        android:layout_alignStart="@+id/imageEyedrops" />
 
 </RelativeLayout>
