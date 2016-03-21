@@ -1,20 +1,15 @@
 <resources>
     <string name="app_name">StarBugs v0</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string name="welcome1_label">Welcome to DR Grading Software.</string>
+    <string name="welcome2_label">Let\'s get started!</string>
     <string name="admin_label">Admin:</string>
     <string name="admin_name">Name</string>
     <string name="patient_info_btn">Enter Patient Information</string>
     <string name="skip_btn">Skip</string>
     <string name="title_activity_patient_info">PatientInfo</string>
 
-
-
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="patient_info_title">\nPatient Information\n</string>
     <string name="name_label">Name:</string>
     <string name="first_name">First name</string>
@@ -31,6 +26,15 @@
 
     <string name="next_btn">Next</string>
     <string name="back_btn">Back</string>
+
+    <string name="step1_label">Step 1:</string>
+    <string name="step2_label">Step 2:</string>
+    <string name="step3_label">Step 3:</string>
+    <string name="step1_instruct">Attach Fundus Lens\nto Phone</string>
+    <string name="step2_instruct">Apply Dilation Eyedrops</string>
+    <string name="step3_instruct">Adjust Position To Obtain a Clear Field of View of the Fundus</string>
+
+
 
     <string name="take_pic_instruction">Click on one of the boxes\nbelow to take picture</string>
     <string name="left_eye_title">Left Eye</string>

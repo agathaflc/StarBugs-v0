@@ -1,81 +1,95 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to DR Grading Software."
-        android:id="@+id/titleText"
-        android:layout_marginTop="83dp"
-        android:textColor="#ff000000"
-        android:textSize="36sp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Let&apos;s get started!"
-        android:id="@+id/textView"
-        android:layout_below="@+id/titleText"
-        android:layout_centerHorizontal="true"
-        android:textSize="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/welcome1_label"
+            android:id="@+id/welcome1Label"
+            android:layout_marginTop="83dp"
+            android:textColor="#ff000000"
+            android:textSize="36sp"
+            android:gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editAdminName"
-        android:hint="@string/admin_name"
-        android:editable="true"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/btnPatientInfo"
-        android:layout_toRightOf="@+id/adminLabel"
-        android:layout_toEndOf="@+id/adminLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/welcome2_label"
+            android:id="@+id/welcome2Label"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/admin_label"
-        android:id="@+id/adminLabel"
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnPatientInfo"
-        android:clickable="true"
-        android:textSize="22sp"
-        android:background="#945fd9f4"
-        android:layout_below="@+id/editAdminName"
-        android:layout_marginTop="69dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="@string/patient_info_btn" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.06">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/skip_btn"
-        android:id="@+id/btnSkip"
-        android:textSize="20sp"
-        android:background="#945fd9f4"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnPatientInfo"
-        android:layout_alignStart="@+id/btnPatientInfo"
-        android:layout_marginBottom="37dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/admin_label"
+            android:id="@+id/adminLabel"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="20sp"
+            android:layout_weight="0.19"
+            android:layout_gravity="center_vertical" />
 
-</RelativeLayout>
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAdminName"
+            android:hint="@string/admin_name"
+            android:editable="true"
+            android:layout_weight="0.04"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="214dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPatientInfo"
+            android:clickable="true"
+            android:textSize="22sp"
+            android:background="#945fd9f4"
+            android:text="@string/patient_info_btn"
+            android:layout_alignBaseline="@+id/btnSkip"
+            android:layout_alignBottom="@+id/btnSkip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip_btn"
+            android:id="@+id/btnSkip"
+            android:textSize="20sp"
+            android:background="#945fd9f4"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/btnPatientInfo"
+            android:layout_alignStart="@+id/btnPatientInfo"
+            android:layout_marginBottom="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</LinearLayout>

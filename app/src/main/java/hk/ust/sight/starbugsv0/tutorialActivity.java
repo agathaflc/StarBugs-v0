@@ -75,16 +75,18 @@ public class tutorialActivity extends Activity {
 //                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
 //            }
 //        });
-        findViewById(R.id.btnNext).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
-            }
-        });
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.btnBack2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(tutorialActivity.this, StartTutorial.class));
+            }
+        });
+
+        findViewById(R.id.btnNext2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
             }
         });
 
