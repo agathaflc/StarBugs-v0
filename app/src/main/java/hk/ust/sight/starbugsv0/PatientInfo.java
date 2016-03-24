@@ -17,8 +17,9 @@ public class PatientInfo extends AppCompatActivity {
 
     private DatePicker datePicker;
     private Calendar calendar;
-    //private TextView dateOfBirth;
-    private int year, month, day;
+    private int month;
+    private int day;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,7 @@ public class PatientInfo extends AppCompatActivity {
     protected Dialog onCreateDialog(int id) {
         // TODO Auto-generated method stub
         if (id == 999) {
+            int year = 1960;
             return new DatePickerDialog(this, myDateListener, year, month, day);
         }
         return null;
