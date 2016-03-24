@@ -78,6 +78,25 @@
             android:id="@+id/labelOdCenter"
             android:layout_column="12"
             android:layout_gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="90sp"
+            android:layout_height="90sp"
+            android:id="@+id/leftCenterDisc"
+            android:layout_gravity="center_vertical"
+            android:background="#000000" />
+
+        <Space
+            android:layout_width="30sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom" />
+
+        <ImageView
+            android:layout_width="90sp"
+            android:layout_height="90sp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_vertical"
+            android:background="#000000" />
     </LinearLayout>
 
     <LinearLayout
