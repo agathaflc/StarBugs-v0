@@ -84,7 +84,7 @@
             android:layout_height="90sp"
             android:id="@+id/leftCenterDisc"
             android:layout_gravity="center_vertical"
-            android:background="#261c1c" />
+            android:background="#000000" />
 
         <Space
             android:layout_width="30sp"
