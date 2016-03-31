@@ -29,6 +29,8 @@ public class ImagesOverview extends AppCompatActivity {
         setContentView(R.layout.activity_images_overview);
     }
 
+    // The fiollowing code handles select image function.
+    // Code taken from http://www.theappguruz.com/blog/android-take-photo-camera-gallery-code-sample
     public static final int REQUEST_CAMERA = 0, SELECT_FILE = 1;
 
     public void selectImage(View view) {
@@ -48,10 +50,17 @@ public class ImagesOverview extends AppCompatActivity {
                             Intent.ACTION_PICK,
                             android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     intent.setType("image/*");*/
-                    Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    /*Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(
                             Intent.createChooser(i, "Select File"),
-                            SELECT_FILE);
+                            SELECT_FILE);*/
+                    // in onCreate or any event where your want the user to
+                    // select a file
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent,
+                            "Select Picture"), SELECT_FILE);
                 } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
@@ -96,13 +105,16 @@ public class ImagesOverview extends AppCompatActivity {
                 int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
                 cursor.moveToFirst();*/
 
-                Uri selectedImage = data.getData();
+                /*Uri selectedImage = data.getData();
                 String[] filePathColumn = { MediaStore.Images.Media.DATA };
                 Cursor cursor = getContentResolver().query(selectedImage,filePathColumn, null, null, null);
                 cursor.moveToFirst();
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
 
-                String selectedImagePath = cursor.getString(columnIndex);
+                String selectedImagePath = cursor.getString(columnIndex);*/
+
+                Uri selectedImageUri = data.getData();
+                String selectedImagePath = getPath(selectedImageUri);
 
                 Bitmap bm;
                 BitmapFactory.Options options = new BitmapFactory.Options();
@@ -123,5 +135,28 @@ public class ImagesOverview extends AppCompatActivity {
         }
 
 
+    }
+
+    /**
+     * helper to retrieve the path of an image URI
+     */
+    public String getPath(Uri uri) {
+        // just some safety built in
+        if( uri == null ) {
+            // TODO perform some logging or show user feedback
+            return null;
+        }
+        // try to retrieve the image from the media store first
+        // this will only work for images selected from gallery
+        String[] projection = { MediaStore.Images.Media.DATA };
+        Cursor cursor = managedQuery(uri, projection, null, null, null);
+        if( cursor != null ){
+            int column_index = cursor
+                    .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            return cursor.getString(column_index);
+        }
+        // this is our fallback here
+        return uri.getPath();
     }
 }
