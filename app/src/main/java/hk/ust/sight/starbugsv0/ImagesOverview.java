@@ -113,6 +113,7 @@ public class ImagesOverview extends AppCompatActivity {
 
                 String selectedImagePath = cursor.getString(columnIndex);*/
 
+                // The following part is taken from http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically
                 Uri selectedImageUri = data.getData();
                 String selectedImagePath = getPath(selectedImageUri);
 
