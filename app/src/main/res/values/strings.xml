@@ -44,8 +44,7 @@
     <string name="od_position_label">Optic Disc\nPosition</string>
     <string name="od_left_label">Left:</string>
     <string name="od_center_label">Center:</string>
-
-
+    <string name="getPhoto">Get Photo</string>
 
 
 </resources>

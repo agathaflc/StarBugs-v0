@@ -71,32 +71,57 @@
         android:layout_height="150dp">
 
         <TextView
-            android:layout_width="86dp"
+            android:layout_width="86sp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/od_center_label"
-            android:id="@+id/labelOdCenter"
-            android:layout_column="12"
+            android:id="@+id/labelOfCenter"
             android:layout_gravity="center_vertical" />
 
-        <ImageView
-            android:layout_width="90sp"
-            android:layout_height="90sp"
-            android:id="@+id/leftCenterDisc"
-            android:layout_gravity="center_vertical"
-            android:background="#000000" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/leftDiscAtCenter"
+                android:src="@drawable/black_box" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getPhoto"
+                android:id="@+id/getLeftEyeCenter" />
+        </LinearLayout>
 
         <Space
-            android:layout_width="30sp"
+            android:layout_width="15sp"
             android:layout_height="match_parent"
             android:layout_gravity="bottom" />
 
-        <ImageView
-            android:layout_width="90sp"
-            android:layout_height="90sp"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_vertical"
-            android:background="#000000" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/rightDiscAtCenter"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/black_box" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getPhoto"
+                android:id="@+id/getRightEyeCenter" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -107,13 +132,57 @@
         android:layout_weight="0.51">
 
         <TextView
-            android:layout_width="64dp"
+            android:layout_width="86dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/od_left_label"
             android:id="@+id/labelOdLeft"
             android:layout_column="12"
             android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/leftDiscOnLeft"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/black_box" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getPhoto"
+                android:id="@+id/getLeftEyeLeft" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="15sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:id="@+id/rightDiscOnLeft"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/black_box" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getPhoto"
+                android:id="@+id/getRightEyeLeft" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
