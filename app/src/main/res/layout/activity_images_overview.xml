@@ -98,7 +98,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/getPhoto"
-                android:id="@+id/getLeftEyeCenter" />
+                android:id="@+id/getLeftEyeCenter"
+                android:onClick="selectImage" />
         </LinearLayout>
 
         <Space
