@@ -29,11 +29,14 @@ public class ImagesOverview extends AppCompatActivity {
         setContentView(R.layout.activity_images_overview);
     }
 
-    // The fiollowing code handles select image function.
+    // The following code handles select image function.
     // Code taken from http://www.theappguruz.com/blog/android-take-photo-camera-gallery-code-sample
     public static final int REQUEST_CAMERA = 0, SELECT_FILE = 1;
+    // Variables to store which button is pressed (and corresponds to which image)
+    public int whichButtonID, whichImageID;
 
     public void selectImage(View view) {
+        whichButtonID = view.getId();
         final CharSequence[] items = {"Take Photo", "Choose from Gallery", "Cancel"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ImagesOverview.this);
@@ -130,7 +133,24 @@ public class ImagesOverview extends AppCompatActivity {
                 options.inJustDecodeBounds = false;
                 bm = BitmapFactory.decodeFile(selectedImagePath, options);
 
-                ImageView ivImage = (ImageView) findViewById(R.id.leftDiscAtCenter);
+                // Handle which imageView will be changed according to which button pressed
+                switch(whichButtonID)
+                {
+                    case R.id.getLeftEyeCenter:
+                        whichImageID = R.id.leftDiscAtCenter;
+                        break;
+                    case R.id.getRightEyeCenter:
+                        whichImageID = R.id.rightDiscAtCenter;
+                        break;
+                    case R.id.getLeftEyeLeft:
+                        whichImageID = R.id.leftDiscOnLeft;
+                        break;
+                    case R.id.getRightEyeLeft:
+                        whichImageID = R.id.rightDiscOnLeft;
+                        break;
+                }
+
+                ImageView ivImage = (ImageView) findViewById(whichImageID);
                 ivImage.setImageBitmap(bm);
             }
         }

@@ -124,7 +124,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/getPhoto"
-                android:id="@+id/getRightEyeCenter" />
+                android:id="@+id/getRightEyeCenter"
+                android:onClick="selectImage" />
         </LinearLayout>
 
     </LinearLayout>
@@ -161,7 +162,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/getPhoto"
-                android:id="@+id/getLeftEyeLeft" />
+                android:id="@+id/getLeftEyeLeft"
+                android:onClick="selectImage" />
         </LinearLayout>
 
         <Space
@@ -185,7 +187,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/getPhoto"
-                android:id="@+id/getRightEyeLeft" />
+                android:id="@+id/getRightEyeLeft"
+                android:onClick="selectImage" />
 
         </LinearLayout>
     </LinearLayout>
