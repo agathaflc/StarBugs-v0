@@ -37,7 +37,6 @@
     <string name="step3_instruct">Adjust Position To Obtain a Clear Field of View of the Fundus</string>
 
 
-
     <string name="take_pic_instruct">Click on one of the boxes\nbelow to take picture</string>
     <string name="left_eye_title">Left Eye</string>
     <string name="right_eye_title">Right Eye</string>
@@ -45,6 +44,16 @@
     <string name="od_left_label">Left:</string>
     <string name="od_center_label">Center:</string>
     <string name="getPhoto">Select Photo</string>
+
+
+    <string name="ug_label">UG</string>
+    <string name="y0_label">Y0</string>
+    <string name="y1_label">Y1</string>
+    <string name="y2_label">Y2</string>
+    <string name="regrade_btn">Regrade</string>
+    <string name="new_patient_btn">New Patient</string>
+
+    <string name="result_title">Grading result for (patient_name)</string>
 
 
 </resources>

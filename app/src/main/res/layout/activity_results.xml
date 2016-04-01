@@ -18,8 +18,8 @@
         android:textSize="24sp"
         android:background="#945fd9f4"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/result_text"
-        android:layout_alignEnd="@+id/result_text" />
+        android:layout_alignRight="@+id/result_text1"
+        android:layout_alignEnd="@+id/result_text1" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="R1"
-        android:id="@+id/result_text"
+        android:id="@+id/result_text1"
         android:textColor="#ff000000"
         android:textSize="36sp"
         android:gravity="center_horizontal"
