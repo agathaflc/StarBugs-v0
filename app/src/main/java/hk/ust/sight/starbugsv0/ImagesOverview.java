@@ -96,7 +96,24 @@ public class ImagesOverview extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                ImageView ivImage = (ImageView) findViewById(R.id.leftDiscAtCenter);
+                // Handle which imageView will be changed according to which button pressed
+                switch(whichButtonID)
+                {
+                    case R.id.getLeftEyeCenter:
+                        whichImageID = R.id.leftDiscAtCenter;
+                        break;
+                    case R.id.getRightEyeCenter:
+                        whichImageID = R.id.rightDiscAtCenter;
+                        break;
+                    case R.id.getLeftEyeLeft:
+                        whichImageID = R.id.leftDiscOnLeft;
+                        break;
+                    case R.id.getRightEyeLeft:
+                        whichImageID = R.id.rightDiscOnLeft;
+                        break;
+                }
+
+                ImageView ivImage = (ImageView) findViewById(whichImageID);
                 ivImage.setImageBitmap(thumbnail);
 
             } else if (requestCode == SELECT_FILE) {
