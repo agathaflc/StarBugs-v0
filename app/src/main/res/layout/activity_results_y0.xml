@@ -45,7 +45,6 @@
             android:textColor="#f6fd17"
             android:textSize="60dp"
             android:gravity="center_horizontal"
-            android:allowUndo="false"
             android:textColorHighlight="#f6fd17"
             android:textColorHint="#f6fd17"
             android:textColorLink="#f6fd17"
