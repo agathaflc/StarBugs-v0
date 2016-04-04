@@ -1,5 +1,6 @@
 package hk.ust.sight.starbugsv0;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,7 +9,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,11 +18,82 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+
 public class ImagesOverview extends AppCompatActivity {
+
+    /**
+     * Created by Ilya Gazman on 3/6/2016.
+     * http://stackoverflow.com/questions/17674634/saving-and-reading-bitmaps-images-from-internal-memory-in-android
+     */
+    public class ImageSaver {
+
+        private String directoryName = "images";
+        private String fileName = "image.png";
+        private Context context;
+
+        public ImageSaver(Context context) {
+            this.context = context;
+        }
+
+        public ImageSaver setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+
+        public ImageSaver setDirectoryName(String directoryName) {
+            this.directoryName = directoryName;
+            return this;
+        }
+
+        public void save(Bitmap bitmapImage) {
+            FileOutputStream fileOutputStream = null;
+            try {
+                fileOutputStream = new FileOutputStream(createFile());
+                bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (fileOutputStream != null) {
+                        fileOutputStream.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        @NonNull
+        private File createFile() {
+            File directory = context.getDir(directoryName, Context.MODE_PRIVATE);
+            return new File(directory, fileName);
+        }
+
+        public Bitmap load() {
+            FileInputStream inputStream = null;
+            try {
+                inputStream = new FileInputStream(createFile());
+                return BitmapFactory.decodeStream(inputStream);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (inputStream != null) {
+                        inputStream.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +150,10 @@ public class ImagesOverview extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
             if (requestCode == REQUEST_CAMERA) {
                 Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+                new ImageSaver(this).
+                        setFileName(Long.toString(System.currentTimeMillis())).
+                        setDirectoryName("patient").
+                        save(thumbnail);
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
 
