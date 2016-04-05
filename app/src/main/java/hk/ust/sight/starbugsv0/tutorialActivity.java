@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextSwitcher;
 
 /**
@@ -90,5 +91,13 @@ public class tutorialActivity extends Activity {
             }
         });
 
+        findViewById(R.id.imageFunduslens).setOnTouchListener(new OnSwipeTouchListener(tutorialActivity.this) {
+            public void onSwipeLeft() {
+                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
+            }
+            public void onSwipeRight() {
+                startActivity(new Intent(tutorialActivity.this, StartTutorial.class));
+            }
+        });
     }
 }

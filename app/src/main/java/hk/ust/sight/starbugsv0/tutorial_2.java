@@ -34,6 +34,15 @@ public class tutorial_2 extends AppCompatActivity {
                 startActivity(new Intent(tutorial_2.this, tutorial_3.class));
             }
         });
+        findViewById(R.id.imageEyedrops).setOnTouchListener(new OnSwipeTouchListener(tutorial_2.this) {
+            public void onSwipeLeft() {
+                startActivity(new Intent(tutorial_2.this, tutorial_3.class));
+            }
+
+            public void onSwipeRight() {
+                startActivity(new Intent(tutorial_2.this, tutorialActivity.class));
+            }
+        });
 //        findViewById(R.id.horizontalScrollView2).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -84,5 +93,6 @@ public class tutorial_2 extends AppCompatActivity {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+
     }
 }

@@ -63,11 +63,12 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
                     android:id="@+id/editPw"
-                    android:hint="@string/admin_pw"
-                    android:editable="true"
                     android:layout_weight="1"
-                    android:layout_gravity="top|center_vertical" />
+                    android:hint="@string/admin_pw" />
+
             </LinearLayout>
 
             <Button
