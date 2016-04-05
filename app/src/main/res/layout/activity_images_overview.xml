@@ -135,7 +135,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.51">
+        android:layout_weight="0.69">
 
         <TextView
             android:layout_width="86dp"
@@ -192,5 +192,24 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/getGrade"
+            android:id="@+id/getGrade"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:background="#945fd9f4"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </LinearLayout>
