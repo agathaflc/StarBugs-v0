@@ -52,7 +52,6 @@ public class PatientInfo extends AppCompatActivity {
                 EditText firstName = (EditText) findViewById(R.id.editFirstName);
                 EditText middleName = (EditText) findViewById(R.id.editMiddleName);
                 EditText bpjsNumber = (EditText) findViewById(R.id.editBpjsNumber);
-
                 EditText clinicName = (EditText) findViewById(R.id.editClinic);
 
                 if (lastName.getText().toString().trim().equals("")) {

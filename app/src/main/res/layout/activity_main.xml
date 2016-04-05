@@ -34,49 +34,9 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.09">
-
-        <TextView
-            android:layout_width="82dp"
-            android:layout_height="wrap_content"
-            android:text="@string/admin_label"
-            android:id="@+id/adminLabel"
-            android:gravity="center_vertical|center_horizontal"
-            android:textSize="20sp"
-            android:layout_gravity="center_vertical" />
-
-        <EditText
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editAdminName"
-            android:hint="@string/admin_name"
-            android:editable="true"
-            android:layout_weight="0.04"
-            android:layout_gravity="center_vertical" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="124dp">
-
-        <EditText
-            android:layout_width="272dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editPw"
-            android:hint="@string/admin_pw"
-            android:editable="true"
-            android:layout_gravity="right" />
-    </LinearLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="179dp">
+        android:layout_height="match_parent">
 
         <Button
             android:layout_width="fill_parent"
@@ -88,7 +48,8 @@
             android:text="@string/patient_info_btn"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="116dp" />
 
         <Button
             android:layout_width="fill_parent"
@@ -97,10 +58,10 @@
             android:id="@+id/btnSkip"
             android:textSize="20sp"
             android:background="#945fd9f4"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/btnPatientInfo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginTop="41dp" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -2,6 +2,8 @@
     <string name="app_name">StarBugs v0</string>
     <string name="action_settings">Settings</string>
 
+    <string name="sign_in_btn">Sign In</string>
+
     <string name="welcome1_label">Welcome to DR Grading Software.</string>
     <string name="welcome2_label">Let\'s get started!</string>
     <string name="admin_label">Admin:</string>
@@ -60,6 +62,20 @@
     <string name="result_title">Grading result for (patient_name)</string>
     <string name="title_activity_tutorial">tutorial</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_admin_login">Administrator Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 
 
 </resources>
