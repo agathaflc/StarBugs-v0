@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/name_label"
-            android:id="@+id/adminLabel"
+            android:id="@+id/nameLabel"
             android:layout_marginLeft="12sp"
             android:layout_marginRight="8sp"
             android:layout_gravity="center_vertical" />
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/male_label"
                 android:id="@+id/radioM"
-                android:checked="false" />
+                android:checked="true" />
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -199,9 +199,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/clinic_label"
+            android:id="@+id/clinicLabel"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="8sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editClinic"
+            android:layout_marginRight="8sp"
+            android:hint="@string/clinic_name" />
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="139dp">
 
         <Button
             android:layout_width="wrap_content"

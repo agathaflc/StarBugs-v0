@@ -34,7 +34,7 @@
         android:layout_weight="0.09">
 
         <TextView
-            android:layout_width="80sp"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:id="@+id/labelOdPosition"
             android:text="@string/od_position_label"
@@ -193,17 +193,23 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/gradeText"
-            android:id="@+id/gradeButton"
-            android:layout_gravity="center" />
-    </LinearLayout>
+            android:text="@string/getGrade"
+            android:id="@+id/getGrade"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:background="#945fd9f4"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
 </LinearLayout>
