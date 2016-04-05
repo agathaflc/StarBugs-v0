@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,10 +48,35 @@ public class PatientInfo extends AppCompatActivity {
         findViewById(R.id.btnNext1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PatientInfo.this, StartTutorial.class));
+                EditText lastName = (EditText) findViewById(R.id.editLastName);
+                EditText firstName = (EditText) findViewById(R.id.editFirstName);
+                EditText middleName = (EditText) findViewById(R.id.editMiddleName);
+                EditText bpjsNumber = (EditText) findViewById(R.id.editBpjsNumber);
+
+                EditText clinicName = (EditText) findViewById(R.id.editClinic);
+
+                if (lastName.getText().toString().trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please Enter Last Name", Toast.LENGTH_SHORT).show();
+                }
+                else if (firstName.getText().toString().trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please Enter First Name", Toast.LENGTH_SHORT).show();
+                }
+                else if (middleName.getText().toString().trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please Enter Middle Name", Toast.LENGTH_SHORT).show();
+                }
+                else if (bpjsNumber.getText().toString().trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please Enter BPJS Number", Toast.LENGTH_SHORT).show();
+                }
+                else if (clinicName.getText().toString().trim().equals("")) {
+                    Toast.makeText(getApplicationContext(), "Please Enter Clinic Name", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(PatientInfo.this, StartTutorial.class));
+                }
             }
         });
     }
+
 
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
