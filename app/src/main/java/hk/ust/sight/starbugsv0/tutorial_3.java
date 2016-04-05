@@ -23,12 +23,20 @@ public class tutorial_3 extends AppCompatActivity {
                 startActivity(new Intent(tutorial_3.this, ImagesOverview.class));
             }
         });
+        findViewById(R.id.imageFundusview).setOnTouchListener(new OnSwipeTouchListener(tutorial_3.this) {
+            public void onSwipeLeft() {
+                startActivity(new Intent(tutorial_3.this, ImagesOverview.class));
+            }
+
+            public void onSwipeRight() {
+                startActivity(new Intent(tutorial_3.this, tutorial_2.class));
+            }
+        });
+
 //        findViewById(R.id.horizontalScrollView3).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                startActivity(new Intent(tutorial_3.this, ImagesOverview.class));
 //            }
-
-
     }
 }
