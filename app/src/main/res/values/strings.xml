@@ -43,7 +43,7 @@
     <string name="od_position_label">Optic Disc\nPosition</string>
     <string name="od_left_label">Left:</string>
     <string name="od_center_label">Center:</string>
-    <string name="getPhoto">Select Photo</string>
+    <string name="getPhoto">Add Photo</string>
 
 
     <string name="ug_label">UG</string>
@@ -54,6 +54,7 @@
     <string name="new_patient_btn">New Patient</string>
 
     <string name="result_title">Grading result for (patient_name)</string>
+    <string name="gradeText">Grade</string>
 
 
 </resources>
