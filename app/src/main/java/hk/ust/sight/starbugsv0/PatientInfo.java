@@ -3,9 +3,12 @@ package hk.ust.sight.starbugsv0;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -17,6 +20,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Calendar;
 
 public class PatientInfo extends AppCompatActivity {
@@ -26,6 +35,7 @@ public class PatientInfo extends AppCompatActivity {
     private int year;
     private int month;
     private int day;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +90,8 @@ public class PatientInfo extends AppCompatActivity {
 
                     // Write into JSON file
                     JSONObject patient = new JSONObject();
+
+
                     try {
                         patient.put("lastName", lastName.getText().toString().trim());
                         patient.put("firstName", firstName.getText().toString().trim());
@@ -92,10 +104,30 @@ public class PatientInfo extends AppCompatActivity {
                         patient.put("phoneNumber", phoneNumString);
                         patient.put("clinicName", clinicName.getText().toString().trim());
 
+                        String fileName = bpjsNumber.getText().toString().trim() + ".json";
+
+                        File destination = new File(Environment.getExternalStorageDirectory(), fileName);
+                        FileOutputStream fo;
+                        try {
+                            destination.createNewFile();
+                            fo = new FileOutputStream(destination);
+                            OutputStreamWriter osw = new OutputStreamWriter(fo);
+                            osw.write(patient.toString());
+                            osw.flush();
+                            Toast.makeText(getApplicationContext(), patient.toString()+"Data",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Data saved",Toast.LENGTH_SHORT).show();
+                            osw.close();
+                            fo.close();
+                        }     catch (Exception e) {
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Settings not saved",Toast.LENGTH_SHORT).show();
+                        }
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
+
+
                     // Go to the next activity
                     startActivity(new Intent(PatientInfo.this, StartTutorial.class));
                 }
@@ -107,8 +139,8 @@ public class PatientInfo extends AppCompatActivity {
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
         showDialog(999);
-        Toast.makeText(getApplicationContext(), "ca", Toast.LENGTH_SHORT)
-                .show();
+//        Toast.makeText(getApplicationContext(), "ca", Toast.LENGTH_SHORT)
+//                .show();
     }
 
     @Override
