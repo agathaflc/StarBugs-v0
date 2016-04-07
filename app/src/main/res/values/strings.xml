@@ -14,9 +14,9 @@
     <string name="admin_pw">Password</string>
 
     <string name="patient_info_title">\nPatient Information\n</string>
-    <string name="name_label">Name*:</string>
-    <string name="first_name">First name</string>
-    <string name="last_name">Last name</string>
+    <string name="name_label">Name:</string>
+    <string name="first_name">First name*</string>
+    <string name="last_name">Last name*</string>
     <string name="mid_name">Middle name</string>
     <string name="bpjs_label">BPJS*:</string>
     <string name="bpjs_number">Number</string>
@@ -91,6 +91,7 @@
         completions."
     </string>
     <string name="done_txt">Done</string>
+    <string name="requiredText">* Required</string>
 
 
 </resources>

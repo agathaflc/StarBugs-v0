@@ -124,7 +124,6 @@ public class PatientInfo extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-
                     // Go to the next activity
                     startActivity(new Intent(PatientInfo.this, StartTutorial.class));
                 }
