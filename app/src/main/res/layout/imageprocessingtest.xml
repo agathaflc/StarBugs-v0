@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/getGrade"
+            android:id="@+id/testGrade"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:background="#945fd9f4"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="GradedImage2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/red"
+            android:background="#000000" />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/green"
+            android:background="#000000"
+            android:contentDescription="red" />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/blue"
+            android:background="#030303" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="120dp"
+            android:id="@+id/grey"
+            android:background="#020202" />
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="120dp"
+            android:id="@+id/edge1"
+            android:background="#000000" />
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="120dp"
+            android:id="@+id/edge2"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/ori"
+            android:background="#000000" />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/filter1"
+            android:background="#000000" />
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="120dp"
+            android:id="@+id/filter2"
+            android:background="#000000" />
+    </LinearLayout>
+</LinearLayout>
