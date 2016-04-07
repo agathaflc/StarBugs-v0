@@ -35,6 +35,7 @@ public class PatientInfo extends AppCompatActivity {
     private int year;
     private int month;
     private int day;
+    public static String patientName;
 
 
     @Override
@@ -123,6 +124,15 @@ public class PatientInfo extends AppCompatActivity {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
+
+                    // Pass the patient name to results page
+                    String patientFirst = firstName.getText().toString().trim();
+                    String patientLast = lastName.getText().toString().trim();
+                    Intent i = new Intent(PatientInfo.this, dataPatient.class);
+                    i.putExtra("patientName", (patientFirst + " " + patientLast));
+                    startActivity(i);
+
+                    patientName = (patientFirst + " " + patientLast);
 
                     // Go to the next activity
                     startActivity(new Intent(PatientInfo.this, StartTutorial.class));

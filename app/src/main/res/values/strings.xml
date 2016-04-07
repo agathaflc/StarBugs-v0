@@ -59,7 +59,7 @@
     <string name="regrade_btn">Regrade</string>
     <string name="new_patient_btn">New Patient</string>
 
-    <string name="result_title">Grading result for (patient_name)</string>
+    <string name="result_title">Grading result for </string>
     <string name="gradeText">Grade</string>
     <string name="title_activity_tutorial">tutorial</string>
     <string name="section_format">Hello World from section: %1$d</string>

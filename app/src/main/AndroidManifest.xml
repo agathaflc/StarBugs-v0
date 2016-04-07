@@ -55,6 +55,7 @@
         <activity android:name=".resultsY2" />
         <activity android:name=".resultsUg" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".dataPatient" />
         <!--
         <activity
             android:name=".adminLogin"
