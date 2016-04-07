@@ -65,6 +65,19 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_admin_login">Administrator Login</string>
 
+    <string name="y0_result">Healthy Retina</string>
+    <string name="y0_description">- Come back for annual rescreen\n- Maintain low sugar intake\n- Make sure to exercise regularly</string>
+    <string name="y1_result">Mildly Defective</string>
+    <string name="y1_description">- Refer to RSUD</string>
+    <string name="y2_result">Moderately Defective</string>
+    <string name="y2_description">-Immediately refer to RSUD, then to RSCM\n- may encounter floaters/visual loss\n- may need to be treated with laser surgery</string>
+    <string name="ug_result">Ungradable</string>
+    <string name="ug_description">- Images are ungradable\n- Consult medical staff for manual screening</string>
+
+
+
+
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
