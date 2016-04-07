@@ -10,263 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03cacc7d-afed-4fd1-bc28-57caf683d81d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_calib3d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_core.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_features2d.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_flann.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_hal.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_highgui.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_imgcodecs.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_imgproc.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_java3.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_ml.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_objdetect.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_photo.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_shape.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_stitching.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_superres.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_ts.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_video.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_videoio.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/arm64-v8a/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/mips64/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86_64/libopencv_videostab.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/ANN_MLP.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Algorithm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/objdetect/BaseCascadeClassifier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/BaseLoaderCallback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/Boost.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/CLAHE.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/Calib3d.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/CameraBridgeViewBase.CvCameraViewFrame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/CameraBridgeViewBase.CvCameraViewListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/CameraBridgeViewBase.CvCameraViewListener2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/CameraBridgeViewBase.ListItemAccessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/CameraBridgeViewBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/objdetect/CascadeClassifier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Core.MinMaxLocResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Core.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/CvException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/CvType.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/DMatch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/DTrees.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/DescriptorExtractor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/DescriptorMatcher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/EM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/FeatureDetector.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/Features2d.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/FpsMeter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgcodecs/Imgcodecs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/Imgproc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/InstallCallbackInterface.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/JavaCameraView.JavaCameraSizeAccessor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/JavaCameraView.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/KNearest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/KeyPoint.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/LineSegmentDetector.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/LoaderCallbackInterface.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/LogisticRegression.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Mat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfByte.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfDMatch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfDouble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfFloat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfFloat4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfFloat6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfInt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfInt4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfKeyPoint.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfPoint.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfPoint2f.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfPoint3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfPoint3f.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/MatOfRect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/Ml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/NormalBayesClassifier.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/OpenCVLoader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Point.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Point3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/RTrees.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Range.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Rect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/RotatedRect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/SVM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Scalar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/Size.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/StatModel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/StereoBM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/StereoMatcher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/StereoSGBM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/Subdiv2D.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/TermCriteria.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/TrainData.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/Utils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_22_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/index-all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/libraries.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/engine/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgcodecs/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/engine/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgcodecs/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/android/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/calib3d/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/core/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/engine/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/features2d/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgcodecs/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/imgproc/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libraries/opencv/javadoc/org/opencv/ml/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_8_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java" afterPath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_images_overview.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_images_overview.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorialActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorialActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorial_2.java" afterPath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorial_2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorial_3.java" afterPath="$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorial_3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StarBugs-v0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -297,7 +42,7 @@
       <file leaf-file-name="activity_images_overview.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_images_overview.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-59.033333">
+            <state vertical-scroll-proportion="0.0">
               <caret line="190" column="48" selection-start-line="190" selection-start-column="48" selection-end-line="190" selection-end-column="48" />
               <folding />
             </state>
@@ -310,8 +55,8 @@
       <file leaf-file-name="ImagesOverview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28595316">
-              <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+            <state vertical-scroll-proportion="-0.6023055">
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -344,7 +89,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#831#1031#0" expanded="false" />
+                <element signature="e#1030#1031#0" expanded="false" />
+                <element signature="e#1089#1283#0" expanded="false" />
+                <element signature="e#1282#1283#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -354,7 +105,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#444#638#0" expanded="false" />
+                <element signature="e#637#638#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -385,7 +140,7 @@
       <file leaf-file-name="activity_admin_login.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_admin_login.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -3339,6 +3094,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Production">
           <PATH>
@@ -3357,45 +3113,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="StarBugs v0" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBugs v0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StarBugs v0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3619,8 +3342,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5677831" sideWeight="0.60665655" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40031898" sideWeight="0.39334342" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15355521" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40031898" sideWeight="0.39334342" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.4614221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
@@ -3628,7 +3350,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25642964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10136157" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3640,6 +3362,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15355521" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3697,31 +3420,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java</url>
-          <line>319</line>
+          <line>332</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java</url>
-          <line>307</line>
+          <line>320</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java</url>
-          <line>352</line>
+          <line>365</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java</url>
-          <line>361</line>
+          <line>374</line>
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java</url>
-          <line>367</line>
+          <line>380</line>
           <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
@@ -3737,6 +3460,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/tutorial_3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#444#638#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.navigation/app/raw/main.nvg.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="navigationeditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/adminLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_admin_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_tutorial_2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73756903">
@@ -3935,7 +3700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3967,7 +3731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4010,7 +3773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4026,7 +3788,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#831#1031#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1089#1283#0" expanded="false" />
+            <element signature="e#1282#1283#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4034,7 +3802,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#444#638#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4081,7 +3853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_images_overview.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-59.033333">
+        <state vertical-scroll-proportion="0.0">
           <caret line="190" column="48" selection-start-line="190" selection-start-column="48" selection-end-line="190" selection-end-column="48" />
           <folding />
         </state>
@@ -4108,8 +3880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hk/ust/sight/starbugsv0/ImagesOverview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28595316">
-          <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        <state vertical-scroll-proportion="-0.6023055">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

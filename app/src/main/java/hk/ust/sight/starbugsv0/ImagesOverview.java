@@ -52,33 +52,46 @@ public class ImagesOverview extends AppCompatActivity {
         if (!OpenCVLoader.initDebug()) {
             Log.d("ERROR", "Unable to load OpenCV");
         }
+        int scale = 1;
+        int delta = 0;
+        int ddepth = 3;
 
-
-        Mat footMat = new Mat();
-
-        Mat dstM = new Mat();
-
-        Mat dst = new Mat();
-        int ddepth = -1; // destination depth. -1 maintains existing depth from source
-        int dx = 1;
-        int dy = 1;
-
-        Utils.bitmapToMat(y1, footMat);
-
-        //cvtColor(image, gray, CV_BGR2GRAY);
-
-        Imgproc.cvtColor(footMat,dst,Imgproc.COLOR_BGR2GRAY);
-       // Imgproc.GaussianBlur(footMat, dstM, new Size(21, 21), 11, 11);
-
+        Mat src = new Mat();
+        Mat gray = new Mat();
         Vector<Mat> channels = new Vector<Mat>(3);
-        Core.split(footMat,channels);
+
+        Utils.bitmapToMat(y1, src);
+
+
+
+        Imgproc.GaussianBlur(src, src, new Size(3, 3), 0, 0, Core.BORDER_DEFAULT);
+
+        Imgproc.cvtColor(src, gray, Imgproc.COLOR_BGR2GRAY);
+
+        Mat grad_x = new Mat();
+        Mat grad_y = new Mat();
+        Mat abs_grad_x = new Mat();
+        Mat abs_grad_y = new Mat();
+//
+       Imgproc.Sobel(gray, grad_x, ddepth, 1, 0, 3, scale, delta, Core.BORDER_DEFAULT);
+        Core.convertScaleAbs(grad_x, abs_grad_x);
+
+
+        Imgproc.Sobel(gray, grad_y, ddepth, 0, 1, 3, scale, delta, Core.BORDER_DEFAULT);
+        Core.convertScaleAbs(grad_y, abs_grad_y);
+//
+        Mat grad = new Mat();
+        Core.addWeighted( abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad );
+//
+//
+//        Core.split(src,channels);
 
 
 
        // Imgproc.Sobel(footMat, dst, ddepth, dx, dy);
-        Bitmap bm = Bitmap.createBitmap(footMat.cols(), footMat.rows(), Bitmap.Config.ARGB_8888);
+        Bitmap bm = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888);
 
-        Utils.matToBitmap(dst, bm);
+        Utils.matToBitmap(grad, bm);
 
 
         ivImage.setImageBitmap(bm);
