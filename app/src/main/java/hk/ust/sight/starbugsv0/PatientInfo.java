@@ -55,9 +55,6 @@ public class PatientInfo extends AppCompatActivity {
                 else if (firstName.getText().toString().trim().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please Enter First Name", Toast.LENGTH_SHORT).show();
                 }
-                else if (middleName.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Please Enter Middle Name", Toast.LENGTH_SHORT).show();
-                }
                 else if (bpjsNumber.getText().toString().trim().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please Enter BPJS Number", Toast.LENGTH_SHORT).show();
                 }
