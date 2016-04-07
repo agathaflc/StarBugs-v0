@@ -13,8 +13,16 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.Size;
+import org.opencv.imgproc.Imgproc;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -22,9 +30,95 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Vector;
 
 
 public class ImagesOverview extends AppCompatActivity {
+
+    String[] mCurrentPhotoPath = new String[4];
+    int[] mCurrentID = new int[4];
+
+    int i = 0;
+
+    public void GradedImage(View view) {
+        InputStream is = this.getResources().openRawResource(R.drawable.a);
+        Bitmap y1 = BitmapFactory.decodeStream(is);
+
+        ImageView ivImage = (ImageView) findViewById(R.id.rightDiscAtCenter);
+
+        ivImage.setImageBitmap(y1);
+
+        if (!OpenCVLoader.initDebug()) {
+            Log.d("ERROR", "Unable to load OpenCV");
+        }
+
+
+        Mat footMat = new Mat();
+
+        Mat dstM = new Mat();
+
+        Mat dst = new Mat();
+        int ddepth = -1; // destination depth. -1 maintains existing depth from source
+        int dx = 1;
+        int dy = 1;
+
+        Utils.bitmapToMat(y1, footMat);
+
+        //cvtColor(image, gray, CV_BGR2GRAY);
+
+        Imgproc.cvtColor(footMat,dst,Imgproc.COLOR_BGR2GRAY);
+       // Imgproc.GaussianBlur(footMat, dstM, new Size(21, 21), 11, 11);
+
+        Vector<Mat> channels = new Vector<Mat>(3);
+        Core.split(footMat,channels);
+
+
+
+       // Imgproc.Sobel(footMat, dst, ddepth, dx, dy);
+        Bitmap bm = Bitmap.createBitmap(footMat.cols(), footMat.rows(), Bitmap.Config.ARGB_8888);
+
+        Utils.matToBitmap(dst, bm);
+
+
+        ivImage.setImageBitmap(bm);
+
+
+         //Imgproc.Sobel(tmp, dst, ddepth, dx, dy);
+
+
+        //  Bitmap thumbnail = BitmapFactory.decodeFile(mCurrentPhotoPath[0]);
+
+        //  ImageView ivImage = (ImageView) findViewById(R.id.rightDiscAtCenter);
+        //  ivImage.setImageBitmap(thumbnail);
+
+        // Bitmap thumbnail2 = thumbnail.copy(Bitmap.Config.ARGB_8888, true);
+        // Mat tmp =null;
+        // Utils.bitmapToMat(thumbnail2, tmp);
+
+
+        //Mat dst = null;
+        // int ddepth = -1; // destination depth. -1 maintains existing depth from source
+        // int dx = 1;
+        // int dy = 1;
+        // Imgproc.Sobel(tmp, dst, ddepth, dx, dy);
+
+        //  Imgproc.cvtColor(tmp, tmp, Imgproc.COLOR_RGB2GRAY);
+        //Imgproc.cvtColor(tmp, tmp, Imgproc.COLOR_GRAY2RGB, 4);
+        //  Utils.matToBitmap(tmp, thumbnail2);
+
+//        Bitmap bmp  = null;
+//        Mat tmp = null;
+//        try {
+//            //Imgproc.cvtColor(seedsImage, tmp, Imgproc.COLOR_RGB2BGRA);
+//            Imgproc.cvtColor(dst, tmp, Imgproc.COLOR_GRAY2RGBA, 4);
+//            bmp = Bitmap.createBitmap(tmp.cols(), tmp.rows(), Bitmap.Config.ARGB_8888);
+//            Utils.matToBitmap(tmp, bmp);
+//        }
+//        catch (CvException e){}
+        // ivImage.setImageBitmap(thumbnail);
+
+    }
 
     /**
      * Created by Ilya Gazman on 3/6/2016.

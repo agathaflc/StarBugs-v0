@@ -91,13 +91,13 @@ public class tutorialActivity extends Activity {
             }
         });
 
-        findViewById(R.id.imageFunduslens).setOnTouchListener(new OnSwipeTouchListener(tutorialActivity.this) {
-            public void onSwipeLeft() {
-                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
-            }
-            public void onSwipeRight() {
-                startActivity(new Intent(tutorialActivity.this, StartTutorial.class));
-            }
-        });
+//        findViewById(R.id.imageFunduslens).setOnTouchListener(new OnSwipeTouchListener(tutorialActivity.this) {
+//            public void onSwipeLeft() {
+//                startActivity(new Intent(tutorialActivity.this, tutorial_2.class));
+//            }
+//            public void onSwipeRight() {
+//                startActivity(new Intent(tutorialActivity.this, StartTutorial.class));
+//            }
+//        });
     }
 }
