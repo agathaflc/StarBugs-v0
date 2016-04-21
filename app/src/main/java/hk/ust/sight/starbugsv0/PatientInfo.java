@@ -60,10 +60,7 @@ public class PatientInfo extends AppCompatActivity {
                 EditText bpjsNumber = (EditText) findViewById(R.id.editBpjsNumber);
                 EditText clinicName = (EditText) findViewById(R.id.editClinic);
 
-                if (lastName.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Please Enter Last Name", Toast.LENGTH_SHORT).show();
-                }
-                else if (firstName.getText().toString().trim().equals("")) {
+                if  (firstName.getText().toString().trim().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please Enter First Name", Toast.LENGTH_SHORT).show();
                 }
                 else if (bpjsNumber.getText().toString().trim().equals("")) {
