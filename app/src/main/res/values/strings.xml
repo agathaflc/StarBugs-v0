@@ -16,9 +16,10 @@
     <string name="patient_info_title">\nPatient Information\n</string>
     <string name="name_label">Name:</string>
     <string name="first_name">First name*</string>
-    <string name="last_name">Last name*</string>
+    <string name="last_name">Last name</string>
     <string name="mid_name">Middle name</string>
     <string name="bpjs_label">BPJS*:</string>
+    <string name="ktp_note">If no BPJS, please enter KTP Number</string>
     <string name="bpjs_number">Number</string>
     <string name="gender_label">Gender*:</string>
     <string name="male_label">Male</string>
@@ -38,7 +39,7 @@
     <string name="step2_label">Step 2:</string>
     <string name="step3_label">Step 3:</string>
     <string name="step1_instruct">Attach Fundus Lens\nto Phone</string>
-    <string name="step2_instruct">Apply Dilation Eyedrops</string>
+    <string name="step2_instruct">Apply Dilation Eyedrops (if available)</string>
     <string name="step3_instruct">Adjust Position To Obtain a Clear Field of View of the Fundus</string>
 
 
@@ -92,6 +93,7 @@
     </string>
     <string name="done_txt">Done</string>
     <string name="requiredText">* Required</string>
+    <string name="loadingText">Loading...</string>
 
 
 </resources>
