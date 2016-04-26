@@ -12,7 +12,7 @@ import java.util.logging.LogRecord;
  * Created by StarBugs on 26/4/16.
  */
 public class loadingPage extends AppCompatActivity {
-    private static int TIME_OUT = 2500; //Time to launch the another activity
+    private static int TIME_OUT = 2700; //Time to launch the another activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
