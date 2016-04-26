@@ -26,6 +26,7 @@ public class results extends AppCompatActivity {
                 startActivity(new Intent(results.this, ImagesOverview.class));
             }
         });
+
         findViewById(R.id.newPButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
