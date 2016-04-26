@@ -119,7 +119,7 @@ public class ImagesOverview extends AppCompatActivity {
         findViewById(R.id.getGrade).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ImagesOverview.this, imageprocessing.class));
+                startActivity(new Intent(ImagesOverview.this, loadingPage.class));
             }
         });
 

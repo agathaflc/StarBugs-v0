@@ -93,7 +93,7 @@
     </string>
     <string name="done_txt">Done</string>
     <string name="requiredText">* Required</string>
-    <string name="loadingText">Loading...</string>
+    <string name="loadingText">Analysing picture...</string>
 
 
 </resources>

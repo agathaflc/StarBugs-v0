@@ -1,26 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 	android:gravity="center" android:orientation="vertical"
+    android:layout_height="fill_parent" android:background="#E5E5E5">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/loadingText"
-        android:id="@+id/load"
-        android:layout_marginTop="151dp"
-        android:textSize="28sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <TextView android:text="@string/loadingText"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24dp">
+    </TextView>
+    <ProgressBar android:id="@+id/mainSpinner1" android:layout_gravity="center"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleInverse">
+    </ProgressBar>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/loading"
-        android:maxHeight="4dp"
-        android:maxWidth="4dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+</LinearLayout>
