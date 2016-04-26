@@ -38,7 +38,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/step2Instruct"
             android:textColor="#ff000000"
-            android:textSize="36sp"
+            android:textSize="32sp"
             android:gravity="center_horizontal"
             android:text="@string/step2_instruct" />
     </LinearLayout>
