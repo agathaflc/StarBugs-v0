@@ -123,7 +123,13 @@ public class ImagesOverview extends AppCompatActivity {
             }
         });
 
-
+        /* use this version for actual implementation
+        findViewById(R.id.getGrade).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ImagesOverview.this, imageprocessing.class));
+            }
+        });*/
     }
 
     // The following code handles select image function.

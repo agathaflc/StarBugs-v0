@@ -13,6 +13,9 @@ import java.util.logging.LogRecord;
 /**
  * Created by StarBugs on 26/4/16.
  */
+
+//disclaimer: https://androidcookbook.com/Recipe.seam?recipeId=1599
+
 public class loadingPage extends Activity {
 
     //Introduce an delay
