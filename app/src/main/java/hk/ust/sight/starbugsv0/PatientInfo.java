@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -101,7 +102,12 @@ public class PatientInfo extends AppCompatActivity {
 
                         String fileName = bpjsNumber.getText().toString().trim() + ".json";
 
-                        File destination = new File(Environment.getExternalStorageDirectory(), fileName);
+                        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+                        // path to /data/data/hk.ust,sight.starbugsv0/app_patient_data/
+                        File directory = cw.getDir("patient_data", Context.MODE_PRIVATE);
+
+                        File destination =new File(directory,fileName);
+                        //File destination = new File(Environment.getExternalStorageDirectory(), fileName);
                         FileOutputStream fo;
                         try {
                             destination.createNewFile();
@@ -111,6 +117,7 @@ public class PatientInfo extends AppCompatActivity {
                             osw.flush();
                             Toast.makeText(getApplicationContext(), patient.toString()+"Data",Toast.LENGTH_SHORT).show();
                             Toast.makeText(getApplicationContext(), "Data saved",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), destination.toString(),Toast.LENGTH_SHORT).show();
                             osw.close();
                             fo.close();
                         }     catch (Exception e) {

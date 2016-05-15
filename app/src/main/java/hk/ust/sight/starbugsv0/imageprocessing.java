@@ -1,5 +1,7 @@
 package hk.ust.sight.starbugsv0;
 
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,6 +20,9 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Vector;
 
@@ -59,7 +64,7 @@ public class imageprocessing extends AppCompatActivity {
     }
 
     public void GradedImagea2(View view) {
-        InputStream is = this.getResources().openRawResource(R.drawable.a2);
+        InputStream is = this.getResources().openRawResource(+ R.drawable.a2);
 
         Bitmap y1 = BitmapFactory.decodeStream(is);
 
@@ -225,7 +230,7 @@ public class imageprocessing extends AppCompatActivity {
     }
 
     public void GradedImageb2(View view) {
-        InputStream is = this.getResources().openRawResource(R.drawable.b2);
+        InputStream is = this.getResources().openRawResource(+ R.drawable.b2);
 
         Bitmap y1 = BitmapFactory.decodeStream(is);
 
@@ -392,9 +397,31 @@ public class imageprocessing extends AppCompatActivity {
 
 
     public void GradedImagec2(View view) {
-        InputStream is = this.getResources().openRawResource(R.drawable.c2);
 
-        Bitmap y1 = BitmapFactory.decodeStream(is);
+        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+        // data/data/hk.ust,sight.starbugsv0/app_images/
+        File directory = cw.getDir("images", Context.MODE_PRIVATE);
+
+        String path =  directory.toString() + "/" + "test" + "_LC" + ".png";
+        if(PatientInfo.patientName != null) {
+            path = directory.toString() + "/" + PatientInfo.patientName + "_LC" + ".png";
+        }
+        Bitmap y1 = null;
+
+        try {
+            File f=new File(path);
+            y1 = BitmapFactory.decodeStream(new FileInputStream(f));
+
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
+
+
+        //InputStream is = this.getResources().openRawResource(R.drawable.c2);
+
 
         ImageView redImage = (ImageView) findViewById(R.id.red);
 

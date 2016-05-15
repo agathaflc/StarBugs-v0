@@ -1,6 +1,7 @@
 package hk.ust.sight.starbugsv0;
 
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
@@ -31,6 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.util.Vector;
 
 import org.opencv.core.CvType;
@@ -157,11 +160,17 @@ public class ImagesOverview extends AppCompatActivity {
                             SELECT_FILE);*/
                     // in onCreate or any event where your want the user to
                     // select a file
-                    Intent intent = new Intent();
-                    intent.setType("image/*");
-                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                    startActivityForResult(Intent.createChooser(intent,
-                            "Select Picture"), SELECT_FILE);
+
+                    // Create intent to Open Image applications like Gallery, Google Photos
+                    Intent galleryIntent = new Intent(Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    // Start the Intent
+                    startActivityForResult(galleryIntent,SELECT_FILE);
+//                    Intent intent = new Intent();
+//                    intent.setType("image/*");
+//                    intent.setAction(Intent.ACTION_GET_CONTENT);
+//                    startActivityForResult(Intent.createChooser(intent,
+//                            "Select Picture"), SELECT_FILE);
                 } else if (items[item].equals("Cancel")) {
                     dialog.dismiss();
                 }
@@ -193,56 +202,95 @@ public class ImagesOverview extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            // this part is when we use the camera to take picture
-            if (requestCode == REQUEST_CAMERA) {
-                Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-                new ImageSaver(this).
-                        setFileName(Long.toString(System.currentTimeMillis())).
-                        setDirectoryName("patient").
-                        save(thumbnail);
-                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-                thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        // this part is when we use the camera to take picture
+        if (resultCode == RESULT_OK) if (requestCode == REQUEST_CAMERA) {
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
 
-                // this part saves to external storage
-                File destination = new File(Environment.getExternalStorageDirectory(),
-                        System.currentTimeMillis() + ".jpg");
+            float ratio = (float) 1280 / (thumbnail.getHeight());
 
-                saveImageToInternalStorage(thumbnail, this);
+            Bitmap resized = Bitmap.createScaledBitmap(thumbnail, (int) (thumbnail.getWidth() * ratio), 1280, true);
 
-                FileOutputStream fo;
-                try {
-                    destination.createNewFile();
-                    fo = new FileOutputStream(destination);
-                    fo.write(bytes.toByteArray());
-                    fo.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            String position = null;
+            switch (whichButtonID) {
+                case R.id.getLeftEyeCenter:
+                    position = "_LC";
+                    break;
+                case R.id.getRightEyeCenter:
+                    position = "_RC";
+                    break;
+                case R.id.getLeftEyeLeft:
+                    position = "_LL";
+                    break;
+                case R.id.getRightEyeLeft:
+                    position = "_RC";
+                    break;
+            }
+            String fileName = String.format("test" + position + ".png");
+            if (PatientInfo.patientName != null) {
+                fileName = String.format(PatientInfo.patientName + position + ".png");
+            }
 
-                // Handle which imageView will be changed according to which button pressed
-                switch(whichButtonID)
-                {
-                    case R.id.getLeftEyeCenter:
-                        whichImageID = R.id.leftDiscAtCenter;
-                        break;
-                    case R.id.getRightEyeCenter:
-                        whichImageID = R.id.rightDiscAtCenter;
-                        break;
-                    case R.id.getLeftEyeLeft:
-                        whichImageID = R.id.leftDiscOnLeft;
-                        break;
-                    case R.id.getRightEyeLeft:
-                        whichImageID = R.id.rightDiscOnLeft;
-                        break;
-                }
 
-                ImageView ivImage = (ImageView) findViewById(whichImageID);
-                ivImage.setImageBitmap(thumbnail);
+            //File destination = new File(Environment.getExternalStorageDirectory(), fileName);
+            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+            // data/data/hk.ust,sight.starbugsv0/app_images/
+            File directory = cw.getDir("images", Context.MODE_PRIVATE);
 
-            } else if (requestCode == SELECT_FILE) {
+            File destination = new File(directory, fileName);
+//                new ImageSaver(this).
+//                        setFileName(Long.toString(System.currentTimeMillis())).
+//                        setDirectoryName("patient").
+//                        save(thumbnail);
+//                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            //thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+
+            // this part saves to external storage
+//                File destination = new File(Environment.getExternalStorageDirectory(),
+//                        System.currentTimeMillis() + ".jpg");
+
+            //saveImageToInternalStorage(thumbnail, this);
+
+            FileOutputStream fo;
+            try {
+//                    destination.createNewFile();
+//                    fo = new FileOutputStream(destination);
+//                    fo.write(bytes.toByteArray());
+//                    fo.close();
+                fo = new FileOutputStream(destination);
+                resized.compress(Bitmap.CompressFormat.PNG, 100, fo);
+                destination.createNewFile();
+
+
+                Toast.makeText(getApplicationContext(), "Image saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), destination.toString(), Toast.LENGTH_SHORT).show();
+
+                fo.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // Handle which imageView will be changed according to which button pressed
+            switch (whichButtonID) {
+                case R.id.getLeftEyeCenter:
+                    whichImageID = R.id.leftDiscAtCenter;
+                    break;
+                case R.id.getRightEyeCenter:
+                    whichImageID = R.id.rightDiscAtCenter;
+                    break;
+                case R.id.getLeftEyeLeft:
+                    whichImageID = R.id.leftDiscOnLeft;
+                    break;
+                case R.id.getRightEyeLeft:
+                    whichImageID = R.id.rightDiscOnLeft;
+                    break;
+            }
+
+            ImageView ivImage = (ImageView) findViewById(whichImageID);
+            ivImage.setImageBitmap(thumbnail);
+
+        } else if (requestCode == SELECT_FILE) {
                 /*Uri selectedImageUri = data.getData();
                 String[] projection = {MediaStore.MediaColumns.DATA};
                 CursorLoader cursorLoader = new CursorLoader(this, selectedImageUri, projection, null, null,
@@ -259,43 +307,93 @@ public class ImagesOverview extends AppCompatActivity {
 
                 String selectedImagePath = cursor.getString(columnIndex);*/
 
-                // The following part is taken from http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically
-                Uri selectedImageUri = data.getData();
-                String selectedImagePath = getPath(selectedImageUri);
+            // The following part is taken from http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically
+            Uri selectedImageUri = data.getData();
+            String selectedImagePath = getPath(selectedImageUri);
 
-                Bitmap bm;
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inJustDecodeBounds = true;
-                BitmapFactory.decodeFile(selectedImagePath, options);
-                final int REQUIRED_SIZE = 200;
-                int scale = 1;
-                while (options.outWidth / scale / 2 >= REQUIRED_SIZE
-                        && options.outHeight / scale / 2 >= REQUIRED_SIZE)
-                    scale *= 2;
-                options.inSampleSize = scale;
-                options.inJustDecodeBounds = false;
-                bm = BitmapFactory.decodeFile(selectedImagePath, options);
+            Bitmap bm;
 
-                // Handle which imageView will be changed according to which button pressed
-                switch(whichButtonID)
-                {
-                    case R.id.getLeftEyeCenter:
-                        whichImageID = R.id.leftDiscAtCenter;
-                        break;
-                    case R.id.getRightEyeCenter:
-                        whichImageID = R.id.rightDiscAtCenter;
-                        break;
-                    case R.id.getLeftEyeLeft:
-                        whichImageID = R.id.leftDiscOnLeft;
-                        break;
-                    case R.id.getRightEyeLeft:
-                        whichImageID = R.id.rightDiscOnLeft;
-                        break;
-                }
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(selectedImagePath, options);
+            final int REQUIRED_SIZE = 200;
+            int scale = 1;
+            while (options.outWidth / scale / 2 >= REQUIRED_SIZE
+                    && options.outHeight / scale / 2 >= REQUIRED_SIZE)
+                scale *= 2;
+            options.inSampleSize = scale;
+            options.inJustDecodeBounds = false;
+            bm = BitmapFactory.decodeFile(selectedImagePath, options);
 
-                ImageView ivImage = (ImageView) findViewById(whichImageID);
-                ivImage.setImageBitmap(bm);
+            options.inSampleSize = 1;
+            Bitmap bm2 = BitmapFactory.decodeFile(selectedImagePath, options);
+            float ratio = (float) 1280 / (bm2.getHeight());
+
+            Bitmap resized = Bitmap.createScaledBitmap(bm2, (int) (bm2.getWidth() * ratio), 1280, true);
+
+            String position = null;
+            switch (whichButtonID) {
+                case R.id.getLeftEyeCenter:
+                    position = "_LC";
+                    break;
+                case R.id.getRightEyeCenter:
+                    position = "_RC";
+                    break;
+                case R.id.getLeftEyeLeft:
+                    position = "_LL";
+                    break;
+                case R.id.getRightEyeLeft:
+                    position = "_RC";
+                    break;
             }
+            String fileName = String.format("test" + position + ".png");
+            if (PatientInfo.patientName != null) {
+                fileName = String.format(PatientInfo.patientName + position + ".png");
+            }
+
+
+            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+            // /data/data/hk.ust,sight.starbugsv0/app_images/
+            File directory = cw.getDir("images", Context.MODE_PRIVATE);
+
+            File destination = new File(directory, fileName);
+
+           //  File destination = new File(Environment.getExternalStorageDirectory(), fileName);
+
+            FileOutputStream fo;
+            try {
+                fo = new FileOutputStream(destination);
+                resized.compress(Bitmap.CompressFormat.PNG, 100, fo);
+                destination.createNewFile();
+
+
+                Toast.makeText(getApplicationContext(), "Image saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), destination.toString(), Toast.LENGTH_SHORT).show();
+
+                fo.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(getApplicationContext(), "Settings not saved", Toast.LENGTH_SHORT).show();
+            }
+
+            // Handle which imageView will be changed according to which button pressed
+            switch (whichButtonID) {
+                case R.id.getLeftEyeCenter:
+                    whichImageID = R.id.leftDiscAtCenter;
+                    break;
+                case R.id.getRightEyeCenter:
+                    whichImageID = R.id.rightDiscAtCenter;
+                    break;
+                case R.id.getLeftEyeLeft:
+                    whichImageID = R.id.leftDiscOnLeft;
+                    break;
+                case R.id.getRightEyeLeft:
+                    whichImageID = R.id.rightDiscOnLeft;
+                    break;
+            }
+
+            ImageView ivImage = (ImageView) findViewById(whichImageID);
+            ivImage.setImageBitmap(bm);
         }
 
 
