@@ -208,6 +208,8 @@ public class ImagesOverview extends AppCompatActivity {
                 File destination = new File(Environment.getExternalStorageDirectory(),
                         System.currentTimeMillis() + ".jpg");
 
+                saveImageToInternalStorage(thumbnail, this);
+
                 FileOutputStream fo;
                 try {
                     destination.createNewFile();
