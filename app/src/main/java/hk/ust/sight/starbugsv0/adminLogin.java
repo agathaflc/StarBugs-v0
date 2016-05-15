@@ -18,7 +18,7 @@ public class adminLogin extends AppCompatActivity {
             public void onClick(View v) {
                 EditText username = (EditText) findViewById(R.id.editAdminName);
                 EditText password = (EditText) findViewById(R.id.editPw);
-                if (username.getText().toString().equals("123") && password.getText().toString().equals("123")) {
+                if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
                     startActivity(new Intent(adminLogin.this, MainActivity.class));
                 }
                 else{
