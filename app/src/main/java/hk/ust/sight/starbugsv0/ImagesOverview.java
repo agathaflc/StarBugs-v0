@@ -116,6 +116,7 @@ public class ImagesOverview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_images_overview);
 
+        // This part handles the "Grade" button
         findViewById(R.id.getGrade).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -169,10 +170,31 @@ public class ImagesOverview extends AppCompatActivity {
         builder.show();
     }
 
+    // this method saves a bitmap into internal storage
+    // code is taken from http://www.e-nature.ch/tech/saving-loading-bitmaps-to-the-android-device-storage-internal-external/
+    public boolean saveImageToInternalStorage(Bitmap image, Context context) {
+
+        try {
+            // Use the compress method on the Bitmap object to write image to
+            // the OutputStream
+            FileOutputStream fos = context.openFileOutput("desiredFilename.png", Context.MODE_PRIVATE);
+
+            // Writing the bitmap to the output stream
+            image.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            fos.close();
+
+            return true;
+        } catch (Exception e) {
+            Log.e("saveToInternalStorage()", e.getMessage());
+            return false;
+        }
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
+            // this part is when we use the camera to take picture
             if (requestCode == REQUEST_CAMERA) {
                 Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
                 new ImageSaver(this).
@@ -182,6 +204,7 @@ public class ImagesOverview extends AppCompatActivity {
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 thumbnail.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
+                // this part saves to external storage
                 File destination = new File(Environment.getExternalStorageDirectory(),
                         System.currentTimeMillis() + ".jpg");
 
