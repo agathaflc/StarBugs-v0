@@ -114,11 +114,11 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text="@string/new_patient_btn"
-            android:id="@+id/newPButton1"
+            android:id="@+id/newPButtonUG"
             android:clickable="true"
             android:textSize="24sp"
             android:background="#945fd9f4"
-            android:layout_alignTop="@+id/regradeButton3"
+            android:layout_alignTop="@+id/regradeButtonY1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -126,7 +126,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/regrade_btn"
-            android:id="@+id/regradeButton1"
+            android:id="@+id/regradeButtonUG"
             android:clickable="true"
             android:textSize="24sp"
             android:background="#945fd9f4"
