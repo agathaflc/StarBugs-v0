@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -27,7 +27,7 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
         android:layout_gravity="right"
@@ -52,10 +52,6 @@
             android:layout_weight="0.14"
             android:layout_gravity="center" />
 
-        <Space
-            android:layout_width="25sp"
-            android:layout_height="match_parent" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +66,7 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="351dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp">
 
         <TextView
@@ -87,12 +83,13 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:id="@+id/leftDiscAtCenter"
                 android:src="@drawable/black_box"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:onClick="loadPhoto"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -113,12 +110,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:id="@+id/rightDiscAtCenter"
                 android:layout_gravity="center"
-                android:src="@drawable/black_box" />
+                android:src="@drawable/black_box"
+                android:onClick="loadPhoto"/>
+
 
             <Button
                 android:layout_width="wrap_content"
@@ -151,12 +150,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent" >
 
-            <ImageView
+            <ImageButton
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:id="@+id/leftDiscOnLeft"
                 android:layout_gravity="center"
-                android:src="@drawable/black_box" />
+                android:src="@drawable/black_box"
+                android:onClick="loadPhoto"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -176,12 +176,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:id="@+id/rightDiscOnLeft"
                 android:layout_gravity="center"
-                android:src="@drawable/black_box" />
+                android:src="@drawable/black_box"
+                android:onClick="loadPhoto"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -202,7 +203,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/getGrade"
+            android:text="SAVE"
             android:id="@+id/getGrade"
             android:clickable="true"
             android:textSize="24sp"

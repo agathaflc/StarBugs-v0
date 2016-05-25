@@ -26,6 +26,20 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(new Intent(MainActivity.this, StartTutorial.class));
             }
         });
+
+        findViewById(R.id.btnDemo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, imageprocessing.class));
+            }
+        });
+
+        findViewById(R.id.btnMap).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MapActivity.class));
+            }
+        });
     }
 
     @Override

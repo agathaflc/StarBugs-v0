@@ -40,14 +40,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/getGrade"
+            android:text="image"
             android:id="@+id/testGrad3e"
             android:clickable="true"
             android:textSize="24sp"
             android:background="#941bf913"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:onClick="GradedImagec2"
+            android:onClick="selectImage"
             android:layout_weight="0.19" />
     </LinearLayout>
 
@@ -176,6 +176,30 @@
             android:clickable="true"
             android:onClick="Result"
             android:id="@+id/button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText22"
+            android:singleLine="true"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText11"
+            android:singleLine="true"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </LinearLayout>

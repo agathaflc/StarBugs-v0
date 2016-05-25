@@ -2,15 +2,24 @@ package hk.ust.sight.starbugsv0;
 
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
@@ -23,8 +32,13 @@ import org.opencv.imgproc.Imgproc;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
+
+import static hk.ust.sight.starbugsv0.ImagesOverview.REQUEST_CAMERA;
+import static hk.ust.sight.starbugsv0.ImagesOverview.SELECT_FILE;
 
 /**
  * Created by Benlai on 7/4/2016.
@@ -43,8 +57,6 @@ public class imageprocessing extends AppCompatActivity {
     }
 
     public void Result(View view) {
-
-
 
         if(ranking > 1)
         {
@@ -395,17 +407,133 @@ public class imageprocessing extends AppCompatActivity {
 
     }
 
+    public void selectImage(final View view) {
+
+        final CharSequence[] items = {"Choose from Gallery", "Cancel"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(imageprocessing.this);
+        builder.setTitle("Add Photo!");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+
+                    if (items[item].equals("Choose from Gallery")) {
+
+                    Intent galleryIntent = new Intent(Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                        Button bButton = (Button) view;
+                        bButton.setText("Grade");
+                        bButton.setOnClickListener(new View.OnClickListener() {
+
+                            public void onClick(View v) {
+                                GradedImagec2(v);
+                            }
+                        });
+                    // Start the Intent
+                    startActivityForResult(galleryIntent,SELECT_FILE);
+
+                } else if (items[item].equals("Cancel")) {
+                    dialog.dismiss();
+                }
+
+
+            }
+        });
+        builder.show();
+    }
+
+    public String getPath(Uri uri) {
+        // just some safety built in
+        if( uri == null ) {
+            // TODO perform some logging or show user feedback
+            return null;
+        }
+        // try to retrieve the image from the media store first
+        // this will only work for images selected from gallery
+        String[] projection = { MediaStore.Images.Media.DATA };
+        Cursor cursor = managedQuery(uri, projection, null, null, null);
+        if( cursor != null ){
+            int column_index = cursor
+                    .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            return cursor.getString(column_index);
+        }
+        // this is our fallback here
+        return uri.getPath();
+    }
+
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+             if (requestCode == SELECT_FILE) {
+            // The following part is taken from http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically
+            Uri selectedImageUri = data.getData();
+            String selectedImagePath = getPath(selectedImageUri);
+
+            BitmapFactory.Options options = new BitmapFactory.Options();
+
+            Bitmap bm2 = BitmapFactory.decodeFile(selectedImagePath,options);
+
+
+                 Bitmap resized = Bitmap.createScaledBitmap(bm2, (int) (bm2.getWidth()/3),(int) (bm2.getHeight()/3) , true);
+
+
+            //Bitmap resized = Bitmap.createScaledBitmap(bm2, (int) 300, 300, true);
+
+
+            String fileName = String.format("test1" + ".png");
+
+            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+            // /data/data/hk.ust,sight.starbugsv0/app_images/
+            File directory = cw.getDir("images", Context.MODE_PRIVATE);
+
+            File destination = new File(directory, fileName);
+
+            //  File destination = new File(Environment.getExternalStorageDirectory(), fileName);
+            FileOutputStream fo;
+            try {
+                fo = new FileOutputStream(destination);
+                resized.compress(Bitmap.CompressFormat.PNG, 100, fo);
+                destination.createNewFile();
+
+                Toast.makeText(getApplicationContext(), "Image saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), destination.toString(), Toast.LENGTH_SHORT).show();
+
+                fo.close();
+
+                ImageView oriImage = (ImageView) findViewById(R.id.ori);
+                oriImage.setImageBitmap(resized);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(getApplicationContext(), "Settings not saved", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+
+    }
 
     public void GradedImagec2(View view) {
+
+        EditText t2 = (EditText) findViewById(R.id.editText22);
+        int disk_t = Integer.parseInt(t2.getText().toString());
+
+        EditText t1 = (EditText) findViewById(R.id.editText11);
+
+        int ex_t = Integer.parseInt(t1.getText().toString());
+
 
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
         // data/data/hk.ust,sight.starbugsv0/app_images/
         File directory = cw.getDir("images", Context.MODE_PRIVATE);
 
-        String path =  directory.toString() + "/" + "test" + "_LC" + ".png";
-        if(PatientInfo.patientName != null) {
-            path = directory.toString() + "/" + PatientInfo.patientName + "_LC" + ".png";
-        }
+        String path =  directory.toString() + "/" + "test1" + ".png";
+
         Bitmap y1 = null;
 
         try {
@@ -418,7 +546,7 @@ public class imageprocessing extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
+        Toast.makeText(getApplicationContext(), "get Image", Toast.LENGTH_SHORT).show();
 
         //InputStream is = this.getResources().openRawResource(R.drawable.c2);
 
@@ -465,7 +593,7 @@ public class imageprocessing extends AppCompatActivity {
 
         //   Core.extractChannel(src,blue,1);
 
-        src = null;
+       // src = null;
 
         Bitmap bmred   = Bitmap.createBitmap(red.cols(), red.rows(), Bitmap.Config.ARGB_8888);
         Utils.matToBitmap(red, bmred);
@@ -509,22 +637,102 @@ public class imageprocessing extends AppCompatActivity {
 
         int area_disk = 0;
 
-        for(int i = 0; i<red.rows(); i++)
-        {
-            for(int w =0; w<red.cols(); w++)
-            {
-                if( red.get(i,w)[0] > 240.0  )
-                {
-                    red.put(i,w,255);
-                    area_disk++;
-                }
-                else
-                {
-                    red.put(i,w,0);
-                }
+        if(disk_t > 10) {
+            for (int i = 0; i < red.rows(); i++) {
+                for (int w = 0; w < red.cols(); w++) {
+                    if (red.get(i, w)[0] > disk_t) {
+                        red.put(i, w, 255);
+                        area_disk++;
+                    } else {
+                        red.put(i, w, 0);
+                    }
 
 
+                }
             }
+        }
+        else
+        {
+            for (int i = 0; i < red.rows(); i++) {
+                for (int w = 0; w < red.cols(); w++) {
+                    if (red.get(i, w)[0] > 230) {
+                        red.put(i, w, 255);
+                        area_disk++;
+                    } else {
+                        red.put(i, w, 0);
+                    }
+
+
+                }
+            }
+
+        }
+        int zz = 0;
+
+        if(area_disk > (int) red.rows()*red.cols()/8 && disk_t == 0) {
+            Core.extractChannel(src, red, 0);
+            area_disk = 0;
+            zz = 1;
+            for (int i = 0; i < red.rows(); i++) {
+                Core.extractChannel(src, red, 0);
+                area_disk = 0;
+
+                for (int w = 0; w < red.cols(); w++) {
+                    if (red.get(i, w)[0] > 240.0) {
+                        red.put(i, w, 255);
+                        area_disk++;
+                    } else {
+                        red.put(i, w, 0);
+                    }
+
+
+                }
+            }
+        }
+
+        int s = 0;
+        if(area_disk < (int) red.rows()*red.cols()/20 && disk_t == 0) {
+            Core.extractChannel(src, red, 0);
+            area_disk = 0;
+            s = 1;
+            for (int i = 0; i < red.rows(); i++) {
+                for (int w = 0; w < red.cols(); w++) {
+                    if (red.get(i, w)[0] > 200.0) {
+                        red.put(i, w, 255);
+                        area_disk++;
+                    } else {
+                        red.put(i, w, 0);
+                    }
+
+
+                }
+            }
+        }
+        if(area_disk < (int) red.rows()*red.cols()/20 && disk_t == 0)
+        {
+            s= 2;
+            Core.extractChannel(src,red,0);
+            area_disk = 0;
+            for(int i = 0; i<red.rows(); i++)
+            {
+                for(int w =0; w<red.cols(); w++)
+                {
+                    if( red.get(i,w)[0] > 170.0  )
+                    {
+                        red.put(i,w,255);
+                        area_disk++;
+                    }
+                    else
+                    {
+                        red.put(i,w,0);
+                    }
+
+
+                }
+            }
+
+
+
         }
 
 
@@ -533,17 +741,37 @@ public class imageprocessing extends AppCompatActivity {
         Utils.matToBitmap(red, bmedge);
         greyImage.setImageBitmap(bmedge);
 
+        Toast.makeText(getApplicationContext(), "Disk", Toast.LENGTH_SHORT).show();
 
 
         int area_extrudate = 0;
 
         Mat green_f = green;
 
+        double threshold = 160.0;
+        if(s ==1 && ex_t == 0)
+        {
+            threshold -= 10.0;
+        }
+        if(s ==2 && ex_t == 0)
+        {
+            threshold -= 20.0;
+        }
+        if(zz == 1 && ex_t == 0)
+        {
+            threshold +=10.0;
+
+        }
+        if( ex_t != 0)
+        {
+            threshold = ex_t;
+        }
         for(int i = 0; i<green.rows(); i++)
         {
+
             for(int w =0; w<green.cols(); w++)
             {
-                if( green.get(i,w)[0] < 160.0 )
+                if( green.get(i,w)[0] < threshold )
                 {
                     green_f.put(i,w,0);
 
@@ -569,15 +797,33 @@ public class imageprocessing extends AppCompatActivity {
         Utils.matToBitmap(green_f, bmgf);
         e1Image.setImageBitmap(bmgf);
 
+        Toast.makeText(getApplicationContext(), "exudates", Toast.LENGTH_SHORT).show();
         red = null;
 
         green = null;
 
         green_f = null;
 
+        if(area_disk != 0)
         ranking =  ( (double) area_extrudate/ (double) area_disk) ;
 
+
+        else ranking = 0;
         Log.d("value","ranking:"+ranking);
+
+
+        Toast.makeText(getApplicationContext(), "ranking:"+ranking , Toast.LENGTH_SHORT).show();
+
+
+
+        Button bButton = (Button) view;
+        bButton.setText("Image");
+        bButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                selectImage(v);
+            }
+        });
 
 
 
